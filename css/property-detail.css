@@ -91,6 +91,15 @@
   margin-bottom: 6px;
 }
 
+@media (max-width: 540px) {
+  .detail-title {
+    font-size: 1.7rem;
+  }
+  .detail-price {
+    font-size: 1.9rem;
+  }
+}
+
 .detail-price-sub {
   font-size: 0.875rem;
   color: var(--text-muted);
@@ -111,6 +120,18 @@
   .gallery-mosaic-grid {
     grid-template-columns: 1fr;
     height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-mosaic-grid {
+    height: 250px;
+  }
+  .btn-view-all-photos {
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -213,6 +234,14 @@
 @media (max-width: 640px) {
   .detail-specs-card {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-specs-card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 12px;
   }
 }
 

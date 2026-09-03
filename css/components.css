@@ -231,13 +231,14 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 300px;
   max-width: 85vw;
   height: 100%;
   background: var(--bg-surface);
   z-index: 2001;
   transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-hover);
@@ -245,6 +246,7 @@
 
 .mobile-drawer.open {
   transform: translateX(0);
+  visibility: visible;
 }
 
 .drawer-header {
@@ -375,6 +377,15 @@
   }
 }
 
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
 /* Modern Tabbed Search Box */
 .search-widget {
   background: #FFFFFF;
@@ -389,16 +400,30 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+@media (max-width: 580px) {
+  .search-widget {
+    padding: 16px 12px;
+    border-radius: var(--radius-md);
+  }
+}
+
 .search-tabs {
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.search-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .search-tab-btn {
-  padding: 8px 20px;
+  padding: 8px 18px;
   font-weight: 700;
   font-size: 0.9375rem;
   border-radius: var(--radius-full);
@@ -407,6 +432,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .search-tab-btn {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
 }
 
 .search-tab-btn.active {
@@ -654,6 +688,19 @@
   margin-bottom: 18px;
 }
 
+@media (max-width: 420px) {
+  .card-specs-grid {
+    gap: 4px;
+    padding: 10px 0;
+  }
+  .spec-val {
+    font-size: 0.8125rem;
+  }
+  .spec-label {
+    font-size: 0.625rem;
+  }
+}
+
 .spec-item {
   display: flex;
   flex-direction: column;
@@ -683,10 +730,11 @@
   display: flex;
   gap: 10px;
   margin-top: auto;
+  flex-wrap: wrap;
 }
 
 .card-actions .btn {
-  flex: 1;
+  flex: 1 1 110px;
 }
 
 /* Institutional Value Cards */
@@ -992,5 +1040,203 @@
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT ADDITIONS & OVERFLOW GUARDS
+   ========================================================================== */
+
+/* Responsive Banner Financing CTA */
+.banner-financing-section {
+  padding: 70px 0;
+}
+
+.banner-financing-card {
+  background: linear-gradient(135deg, #0B132B 0%, #151F38 100%);
+  border-radius: var(--radius-xl);
+  padding: 50px 40px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.banner-financing-content {
+  max-width: 580px;
+  flex: 1 1 300px;
+}
+
+.banner-financing-content h2 {
+  font-size: 2.2rem;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.banner-financing-content p {
+  color: #CBD5E1;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.banner-financing-metric {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  text-align: center;
+  flex: 1 1 240px;
+  max-width: 360px;
+}
+
+.banner-metric-label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  color: #94A3B8;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.banner-metric-val {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #FF8533;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+.banner-metric-val span {
+  font-size: 1rem;
+  color: #CBD5E1;
+}
+
+.banner-metric-desc {
+  font-size: 0.85rem;
+  color: #CBD5E1;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .banner-financing-section {
+    padding: 40px 0;
+  }
+  .banner-financing-card {
+    padding: 28px 18px;
+    gap: 20px;
+    border-radius: var(--radius-lg);
+  }
+  .banner-financing-content h2 {
+    font-size: 1.65rem;
+  }
+  .banner-financing-content p {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .banner-financing-metric {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 14px;
+  }
+  .banner-metric-val {
+    font-size: 2.1rem;
+  }
+}
+
+/* Owner Section Responsive Grid */
+.owner-promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .owner-promo-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Catalog Filter Bar */
+.catalog-filters-bar {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+
+.catalog-search-code-input {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .catalog-filters-bar {
+    grid-template-columns: 1fr;
+  }
+  .catalog-search-code-input {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Form Card Wrapper */
+.form-card-wrapper {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 640px) {
+  .form-card-wrapper {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Header & Bottom Nav micro adjustments on mobile */
+@media (max-width: 480px) {
+  .brand-logo-img {
+    height: 42px;
+    width: 42px;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+  }
+  .brand-subtitle {
+    font-size: 0.6rem;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .btn-favorites-toggle, .hamburger-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .bottom-nav-item {
+    padding: 4px 6px;
+    font-size: 0.625rem;
   }
 }

@@ -340,13 +340,13 @@
     </section>
 
     <!-- Banner Interativo: Simulador de Financiamento -->
-    <section style="padding: 80px 0;">
+    <section class="banner-financing-section">
       <div class="container">
-        <div style="background: linear-gradient(135deg, #0B132B 0%, #151F38 100%); border-radius: var(--radius-xl); padding: 60px 48px; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-          <div style="max-width: 580px;">
+        <div class="banner-financing-card">
+          <div class="banner-financing-content">
             <span class="badge badge-primary" style="margin-bottom: 16px;">Simulador 2026</span>
-            <h2 style="font-size: 2.3rem; color: #FFFFFF; margin-bottom: 16px;">Descubra o valor da sua parcela em menos de 1 minuto</h2>
-            <p style="color: #CBD5E1; font-size: 1.0625rem; margin-bottom: 28px; line-height: 1.6;">Calcule entrada, parcelas estimadas no Sistema SAC ou Tabela Price e envie para pré-aprovação rápida com nossos consultores credenciados Caixa.</p>
+            <h2>Descubra o valor da sua parcela em menos de 1 minuto</h2>
+            <p>Calcule entrada, parcelas estimadas no Sistema SAC ou Tabela Price e envie para pré-aprovação rápida com nossos consultores credenciados Caixa.</p>
             <a href="#calculadora" class="btn btn-primary btn-lg" onclick="window.sommaApp.navigateTo('calculadora');">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="4" y="2" width="16" height="20" rx="2"></rect>
@@ -356,10 +356,10 @@
               <span>Abrir Calculadora de Financiamento</span>
             </a>
           </div>
-          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: 32px; text-align: center; min-width: 280px;">
-            <div style="font-size: 0.8125rem; text-transform: uppercase; color: #94A3B8; margin-bottom: 6px;">Parcelas estimadas a partir de</div>
-            <div style="font-size: 2.8rem; font-weight: 800; color: #FF8533; font-family: var(--font-heading);">R$ 845<span style="font-size: 1rem; color: #CBD5E1;">/mês</span></div>
-            <div style="font-size: 0.875rem; color: #CBD5E1; margin-top: 10px;">Com uso do FGTS e subsídio Minha Casa Minha Vida</div>
+          <div class="banner-financing-metric">
+            <div class="banner-metric-label">Parcelas estimadas a partir de</div>
+            <div class="banner-metric-val">R$ 845<span>/mês</span></div>
+            <div class="banner-metric-desc">Com uso do FGTS e subsídio Minha Casa Minha Vida</div>
           </div>
         </div>
       </div>
@@ -368,7 +368,7 @@
     <!-- Seção: Proprietário (Vender ou Alugar) -->
     <section style="background: #FFFFFF; padding: 90px 0; border-top: 1px solid var(--border-color);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="owner-promo-grid">
           <div>
             <div class="section-tag">Área do Proprietário</div>
             <h2 class="section-title">Quer vender ou alugar seu imóvel com rapidez e valorização?</h2>
@@ -407,7 +407,7 @@
         </div>
 
         <!-- Filter Controls Bar -->
-        <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; align-items: center;">
+        <div class="catalog-filters-bar">
           <!-- Finalidade -->
           <select id="catalog-filter-purpose" class="search-select" style="padding: 10px 14px;">
             <option value="todos">Finalidade: Todas</option>
@@ -458,7 +458,7 @@
           </select>
 
           <!-- Text Search -->
-          <input type="text" id="catalog-search-code" class="search-input" placeholder="Buscar por código (#SM125) ou bairro..." style="padding: 10px 14px; grid-column: span 2;">
+          <input type="text" id="catalog-search-code" class="search-input catalog-search-code-input" placeholder="Buscar por código (#SM125) ou bairro..." style="padding: 10px 14px;">
         </div>
       </div>
     </div>
@@ -842,7 +842,7 @@
         <p class="section-desc" style="margin: 0 auto;">Preencha os dados do seu imóvel. Nossa equipe de especialistas entrará em contato para agendar uma vistoria fotográfica e iniciar a divulgação.</p>
       </div>
 
-      <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 40px; box-shadow: var(--shadow-md);">
+      <div class="form-card-wrapper">
         <form onsubmit="window.sommaApp.handleFormSubmit(event, 'seu-imovel');" class="flex flex-col gap-6">
           <div style="font-size: 1.125rem; font-weight: 700; color: var(--secondary); border-bottom: 2px solid var(--primary-light); padding-bottom: 8px;">
             1. Dados do Proprietário
@@ -997,7 +997,7 @@
         <p class="section-desc" style="margin: 0 auto;">Tire dúvidas sobre imóveis, agende uma visita presencial ou venha tomar um café em nossa sede em Ibirité.</p>
       </div>
 
-      <div class="grid grid-2" style="gap: 40px; align-items: start;">
+      <div class="contact-grid">
         <!-- Contact Info Cards -->
         <div class="flex flex-col gap-4">
           <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm);">
@@ -1063,7 +1063,7 @@
         </div>
 
         <!-- Contact Form -->
-        <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-sm);">
+        <div class="form-card-wrapper">
           <h3 style="font-size: 1.35rem; color: var(--secondary); margin-bottom: 24px;">Envie uma Mensagem</h3>
           <form onsubmit="window.sommaApp.handleFormSubmit(event, 'contato');" class="flex flex-col gap-4">
             <div class="form-group">
