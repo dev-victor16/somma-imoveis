@@ -778,7 +778,14 @@
 
       <!-- Schedule Table -->
       <div class="calc-schedule-wrap">
-        <h3 style="font-size: 1.25rem; color: var(--secondary);">📊 Cronograma de Evolução do Saldo Devedor</h3>
+        <h3 style="font-size: 1.25rem; color: var(--secondary); display: flex; align-items: center; gap: 8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span>Cronograma de Evolução do Saldo Devedor</span>
+        </h3>
         <p style="color: var(--text-muted); font-size: 0.9375rem;">Acompanhe como sua dívida diminui a cada amortização mensal.</p>
         <div style="overflow-x: auto;">
           <table class="schedule-table">
@@ -804,27 +811,37 @@
         <p class="section-desc" style="text-align: center; margin: 0 auto 30px;">Comparamos as melhores taxas entre as principais instituições financeiras para aprovar o seu financiamento com tranquilidade.</p>
         <div class="bank-partners-grid">
           <div class="bank-partner-card">
-            <div class="bank-logo-icon">🏦</div>
+            <div class="bank-logo-wrap">
+              <img src="assets/img/banks/caixa.svg" alt="Caixa Econômica Federal" class="bank-logo-img">
+            </div>
             <div class="bank-name">Caixa Econômica</div>
             <div class="bank-tag">Correspondente Oficial</div>
           </div>
           <div class="bank-partner-card">
-            <div class="bank-logo-icon">🏛️</div>
+            <div class="bank-logo-wrap">
+              <img src="assets/img/banks/banco-do-brasil.svg" alt="Banco do Brasil" class="bank-logo-img">
+            </div>
             <div class="bank-name">Banco do Brasil</div>
             <div class="bank-tag">Crédito Ágil</div>
           </div>
           <div class="bank-partner-card">
-            <div class="bank-logo-icon">🟧</div>
+            <div class="bank-logo-wrap">
+              <img src="assets/img/banks/itau.svg" alt="Itaú" class="bank-logo-img">
+            </div>
             <div class="bank-name">Itaú</div>
             <div class="bank-tag">Até 360 Meses</div>
           </div>
           <div class="bank-partner-card">
-            <div class="bank-logo-icon">🔴</div>
+            <div class="bank-logo-wrap">
+              <img src="assets/img/banks/santander.svg" alt="Santander" class="bank-logo-img">
+            </div>
             <div class="bank-name">Santander</div>
             <div class="bank-tag">Composição de Renda</div>
           </div>
           <div class="bank-partner-card">
-            <div class="bank-logo-icon">🟥</div>
+            <div class="bank-logo-wrap">
+              <img src="assets/img/banks/bradesco.svg" alt="Bradesco" class="bank-logo-img">
+            </div>
             <div class="bank-name">Bradesco</div>
             <div class="bank-tag">Emissão Rápida</div>
           </div>

@@ -458,11 +458,11 @@ const SOMMA_INFO = {
   hours: "Segunda a Sexta: 08:30 às 17:30 | Sábados: sob agendamento",
   citiesCovered: ["Ibirité", "Sarzedo", "Contagem", "Belo Horizonte", "Esmeraldas"],
   banks: [
-    { name: "Caixa Econômica Federal", partner: "Correspondente Caixa Aqui", logo: "🏦 Caixa", interest: "Minha Casa Minha Vida & SBPE" },
-    { name: "Banco do Brasil", partner: "Correspondente BB", logo: "🏛️ BB", interest: "Crédito Imobiliário Ágil" },
-    { name: "Itaú", partner: "Parceiro Oficial", logo: "🟧 Itaú", interest: "Financiamento em até 360 meses" },
-    { name: "Santander", partner: "Parceiro Oficial", logo: "🔴 Santander", interest: "Taxas Competitivas e Composição de Renda" },
-    { name: "Bradesco", partner: "Parceiro Oficial", logo: "🟥 Bradesco", interest: "Agilidade na emissão do contrato" }
+    { name: "Caixa Econômica Federal", partner: "Correspondente Caixa Aqui", logo: "assets/img/banks/caixa.svg", interest: "Minha Casa Minha Vida & SBPE" },
+    { name: "Banco do Brasil", partner: "Correspondente BB", logo: "assets/img/banks/banco-do-brasil.svg", interest: "Crédito Imobiliário Ágil" },
+    { name: "Itaú", partner: "Parceiro Oficial", logo: "assets/img/banks/itau.svg", interest: "Financiamento em até 360 meses" },
+    { name: "Santander", partner: "Parceiro Oficial", logo: "assets/img/banks/santander.svg", interest: "Taxas Competitivas e Composição de Renda" },
+    { name: "Bradesco", partner: "Parceiro Oficial", logo: "assets/img/banks/bradesco.svg", interest: "Agilidade na emissão do contrato" }
   ]
 };
 
