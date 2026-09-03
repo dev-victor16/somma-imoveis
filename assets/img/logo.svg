@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Rich Orange Metallic Gradients -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A1E" />
+      <stop offset="40%" stop-color="#F26522" />
+      <stop offset="70%" stop-color="#E05300" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+
+    <linearGradient id="roofLeftGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D9480F" />
+      <stop offset="50%" stop-color="#F26522" />
+      <stop offset="100%" stop-color="#FF922B" />
+    </linearGradient>
+
+    <linearGradient id="orangeBracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA94D" />
+      <stop offset="30%" stop-color="#F26522" />
+      <stop offset="100%" stop-color="#D9480F" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+
+    <!-- Circular arcs for text -->
+    <!-- Top arc: Clockwise from 140 deg to 40 deg -->
+    <path id="topTextArc" d="M 125,400 A 275,275 0 0,1 675,400" fill="none" />
+    <!-- Bottom arc: Clockwise from 40 deg to 140 deg (drawn left to right for upright text) -->
+    <path id="bottomTextArc" d="M 680,410 A 282,282 0 0,1 120,410" fill="none" />
+  </defs>
+
+  <!-- Outer Double Rings -->
+  <circle cx="400" cy="400" r="372" fill="none" stroke="url(#orangeGrad)" stroke-width="7.5" />
+  <circle cx="400" cy="400" r="352" fill="none" stroke="url(#orangeGrad)" stroke-width="3.5" />
+
+  <!-- Top Text: SOMMA -->
+  <text font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="64" font-weight="700" fill="url(#orangeGrad)" letter-spacing="14">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">SOMMA</textPath>
+  </text>
+
+  <!-- Bottom Text: IMÓVEIS -->
+  <text font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="54" font-weight="700" fill="url(#orangeGrad)" letter-spacing="18">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">IMÓVEIS</textPath>
+  </text>
+
+  <!-- ================= CENTER ROOF ================= -->
+  <!-- Left Roof Beam (Thick Orange Solid) -->
+  <polygon points="195,490 396,196 404,196 404,228 238,474" fill="url(#roofLeftGrad)" />
+  <!-- Left Roof Parallel Thin Line -->
+  <polygon points="242,476 396,248 404,248 404,264 256,486" fill="url(#roofLeftGrad)" />
+
+  <!-- Right Roof Beam (White with outline for contrast) -->
+  <g stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Right Beam -->
+    <polyline points="400,196 470,300 470,250 514,250 514,364 605,488" />
+    <!-- Chimney Details -->
+    <line x1="464" y1="250" x2="520" y2="250" stroke-width="7" />
+    <!-- Inner parallel thin line -->
+    <polyline points="404,250 470,345 520,345 556,396 590,470" stroke-width="3.5" />
+  </g>
+  <!-- Subtle dark drop shadow stroke for visibility on light surfaces -->
+  <g stroke="rgba(15, 23, 42, 0.25)" stroke-width="1.5" fill="none">
+    <polyline points="400,196 470,300 470,250 514,250 514,364 605,488" />
+  </g>
+
+  <!-- ================= CENTER CROSS / PLUS SYMBOL ================= -->
+  <!-- Center at (400, 425), size 160x160 -->
+  <!-- Gap = 16, Arm width = 24, Arm length = 68 -->
+  <!-- Top-Left Bracket (White with subtle border) -->
+  <path d="M 330,355 L 390,355 L 390,378 L 354,378 L 354,415 L 330,415 Z" fill="#FFFFFF" stroke="rgba(15, 23, 42, 0.2)" stroke-width="1.5" />
+
+  <!-- Top-Right Bracket (Orange Gradient) -->
+  <path d="M 470,355 L 410,355 L 410,378 L 446,378 L 446,415 L 470,415 Z" fill="url(#orangeBracketGrad)" filter="url(#softGlow)" />
+
+  <!-- Bottom-Left Bracket (Orange Gradient) -->
+  <path d="M 330,495 L 390,495 L 390,472 L 354,472 L 354,435 L 330,435 Z" fill="url(#orangeBracketGrad)" filter="url(#softGlow)" />
+
+  <!-- Bottom-Right Bracket (White with subtle border) -->
+  <path d="M 470,495 L 410,495 L 410,472 L 446,472 L 446,435 L 470,435 Z" fill="#FFFFFF" stroke="rgba(15, 23, 42, 0.2)" stroke-width="1.5" />
+</svg>

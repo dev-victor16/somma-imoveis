@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A1E" />
+      <stop offset="50%" stop-color="#F26522" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+    <linearGradient id="hRoofLeft" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D9480F" />
+      <stop offset="100%" stop-color="#FF922B" />
+    </linearGradient>
+  </defs>
+
+  <!-- ================= EMBLEM SEAL (Left: 0 to 100) ================= -->
+  <g transform="translate(10, 10) scale(0.1)">
+    <!-- Outer Double Rings -->
+    <circle cx="400" cy="400" r="372" fill="none" stroke="url(#hOrangeGrad)" stroke-width="12" />
+    <circle cx="400" cy="400" r="350" fill="none" stroke="url(#hOrangeGrad)" stroke-width="6" />
+
+    <!-- Top Text Arc -->
+    <path id="hTopArc" d="M 125,400 A 275,275 0 0,1 675,400" fill="none" />
+    <text font-family="'Cinzel', 'Playfair Display', serif" font-size="70" font-weight="700" fill="url(#hOrangeGrad)" letter-spacing="14">
+      <textPath href="#hTopArc" startOffset="50%" text-anchor="middle">SOMMA</textPath>
+    </text>
+
+    <!-- Bottom Text Arc -->
+    <path id="hBottomArc" d="M 680,410 A 282,282 0 0,1 120,410" fill="none" />
+    <text font-family="'Cinzel', 'Playfair Display', serif" font-size="58" font-weight="700" fill="url(#hOrangeGrad)" letter-spacing="18">
+      <textPath href="#hBottomArc" startOffset="50%" text-anchor="middle">IMÓVEIS</textPath>
+    </text>
+
+    <!-- Center Roof: Left (Orange) -->
+    <polygon points="195,490 396,196 404,196 404,228 238,474" fill="url(#hRoofLeft)" />
+    <polygon points="242,476 396,248 404,248 404,264 256,486" fill="url(#hRoofLeft)" />
+
+    <!-- Center Roof: Right (White with dark border) -->
+    <polyline points="400,196 470,300 470,250 514,250 514,364 605,488" stroke="#1E293B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="464" y1="250" x2="520" y2="250" stroke="#1E293B" stroke-width="12" />
+
+    <!-- Center Plus: Brackets -->
+    <path d="M 330,355 L 390,355 L 390,378 L 354,378 L 354,415 L 330,415 Z" fill="#64748B" />
+    <path d="M 470,355 L 410,355 L 410,378 L 446,378 L 446,415 L 470,415 Z" fill="url(#hOrangeGrad)" />
+    <path d="M 330,495 L 390,495 L 390,472 L 354,472 L 354,435 L 330,435 Z" fill="url(#hOrangeGrad)" />
+    <path d="M 470,495 L 410,495 L 410,472 L 446,472 L 446,435 L 470,435 Z" fill="#64748B" />
+  </g>
+
+  <!-- ================= TYPOGRAPHY (Right) ================= -->
+  <g transform="translate(108, 0)">
+    <!-- Title: SOMMA -->
+    <text x="0" y="46" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="900" fill="#0B132B" letter-spacing="-0.5">
+      SOMMA <tspan fill="#F26522">IMÓVEIS</tspan>
+    </text>
+
+    <!-- Subtitle: IMOBILIÁRIA & CORRESPONDENTE -->
+    <text x="2" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="700" fill="#64748B" letter-spacing="3.5">
+      IMOBILIÁRIA &amp; CORRESPONDENTE
+    </text>
+
+    <!-- Badge CRECI -->
+    <rect x="2" y="78" width="112" height="18" rx="4" fill="rgba(242, 101, 34, 0.12)" />
+    <text x="8" y="91" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="800" fill="#D9480F" letter-spacing="0.5">
+      CRECI-MG 38647
+    </text>
+  </g>
+</svg>

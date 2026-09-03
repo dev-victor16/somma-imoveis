@@ -1,0 +1,19 @@
+{
+  "name": "somma-imoveis-2026",
+  "version": "2.0.0",
+  "description": "Nova Plataforma Imobiliária Digital da Somma Imóveis (Ibirité, Sarzedo, Contagem e Região)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "imobiliaria",
+    "somma-imoveis",
+    "ibirite",
+    "sarzedo",
+    "real-estate"
+  ],
+  "author": "Somma Imóveis Ibirité LTDA",
+  "license": "ISC"
+}
